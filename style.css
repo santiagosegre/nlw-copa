@@ -9,35 +9,36 @@
   --card-title-border-color: #746615;
   --card-border-in-color: #323238;
   --card-text-color: #E1E1E6;
-  --card-bg-color: #1D1C19;
+  --card-bg-color: hsla(45, 7%, 11%, 0.825);
   --body-color-background: #121214;
-  --bg: url(./assets/bg/bg-yellow.svg);
+  --bg: url(./assets/bg/bg-red.svg);
 }
 
 body.yellow {
   --card-color-primary: #F7DD43;
   --card-title-border-color: #746615;
+  --card-bg-color: hsl(240, 6%, 13%, 0.825);
   --bg: url(./assets/bg/bg-yellow.svg);
 }
 
 body.blue {
   --card-color-primary: #338AF3;
   --card-title-border-color: #338AF3;
-  --card-bg-color: #202024;
+  --card-bg-color: hsl(240, 6%, 13%, 0.825);
   --bg: url(./assets/bg/bg-blue.svg);
 }
 
 body.red {
-  --card-color-primary: #B81738;
-  --card-title-border-color: #B81738;
-  --card-bg-color: #202024;
+  --card-color-primary: #db1d1d;
+  --card-title-border-color: #db1d1d;
+  --card-bg-color: rgba(31, 31, 35, 0.888);
   --bg: url(./assets/bg/bg-red.svg);
 }
 
 body.green {
   --card-color-primary: #047C3F;
   --card-title-border-color: #047C3F;
-  --card-bg-color: #1A1F1B;
+  --card-bg-color: hsl(132, 9%, 11%, 0.825);
   --bg: url(./assets/bg/bg-green.svg);
 }
 
@@ -74,7 +75,7 @@ header {
   padding: 32px 23px;
   text-align: center;
   background-color: var(--card-bg-color);
-  border-radius: 6px;
+  border-radius: 12px;
   border-bottom: 2px solid var(--card-color-primary);
 }
 
@@ -92,7 +93,7 @@ header {
   gap: 16px;
   padding: 8px 16px;
   border: 1px solid var(--card-title-border-color);
-  border-radius: 6px;
+  border-radius: 12px;
   margin-bottom: 53px;
   color: #F7DD43;
 }
@@ -123,7 +124,7 @@ header {
 
 .card ul li strong {
   font-weight: 900;
-  font-size: 36px;
+  font-size: 32px;
   line-height: 125%;
   color: #E1E1E6;
 }
