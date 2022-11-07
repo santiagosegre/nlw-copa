@@ -1,4 +1,4 @@
-<h1 align="center"> NLW #10 Copa </h1>
+<h1 align="center"> Calendário de Jogos da Copa 2022 </h1>
 
 <p align="center">
 Evento exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologias WEB.
@@ -18,7 +18,7 @@ Evento exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologia
 <br>
 
 <p align="center">
-  <img alt="calendário da copa" src="./github/preview.jpg" width="100%">
+  <img alt="calendário da copa" src="./github/projeto.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -43,4 +43,4 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)
+Feito por [Santiago Segre](https://github.com/santiagosegre) com a ajuda da Rocketseat :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)

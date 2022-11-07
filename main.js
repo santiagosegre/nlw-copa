@@ -45,7 +45,7 @@ createGroup("Grupo d", "france", "denmark", "tunisia", "australia")+
 createGroup("Grupo e", "spain", "germany", "japan", "costa-rica")+
 createGroup("Grupo f", "belgium", "canada", "morocco", "croatia")+
 createGroup("Grupo g", "brazil", "serbia", "switzerland", "cameroon")+
-createGroup("Grupo g", "portugal", "ghana", "uruguay", "south-korea")
+createGroup("Grupo h", "portugal", "ghana", "uruguay", "south-korea")
 
 //
 
