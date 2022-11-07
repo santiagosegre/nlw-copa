@@ -1,3 +1,44 @@
+function createGroup(group, player1, player2, player3, player4) {
+  return `
+  <div class="group">
+      <h2>${group}</h2>
+      <ul>
+    <li>
+      <img src="./assets/teams/icon-${player1}.svg" alt="flag ${player1}">
+      <span>
+          ${player1}
+      </span>
+  </li>
+    <li>
+      <img src="./assets/teams/icon-${player2}.svg" alt="flag ${player2}">
+      <span>
+          ${player2}
+      </span>
+  </li>
+    <li>
+      <img src="./assets/teams/icon-${player3}.svg" alt="flag ${player3}">
+      <span>
+          ${player3}
+      </span>
+  </li>
+    <li>
+      <img src="./assets/teams/icon-${player4}.svg" alt="flag ${player4}">
+      <span>
+          ${player4}
+      </span>
+  </li>
+      </ul>
+  </div>
+  `
+}
+
+// CRIAR GRUPO
+
+document.querySelector("#groups").innerHTML = `
+${createGroup("Grupo A", "qatar", "ecuador", "senegal", "netherlands")}
+`
+
+
 function createGame(player1, hour, player2) {
   return `
   <li>
@@ -20,6 +61,9 @@ function createCard(date, day, games) {
     </div>
     `
 }
+
+
+//CRIAR JOGOS
 
 document.querySelector("#cards").innerHTML =
   createCard("20/11", "domingo", createGame("qatar", "17:00", "ecuador")) +

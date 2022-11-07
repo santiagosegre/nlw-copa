@@ -65,6 +65,64 @@ header {
   text-align: center;
 }
 
+#groups {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32px;
+  gap: 32px;
+}
+
+.group {
+  padding: 32px 23px;
+  text-align: center;
+  background-color: var(--card-bg-color);
+  border-radius: 12px;
+  border-bottom: 2px solid var(--card-color-primary);
+}
+
+.group img {
+  width: 50px;
+  height: 50px;
+}
+
+.group h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-inline: auto;
+  gap: 16px;
+  padding: 8px 16px;
+  border: 1px solid var(--card-title-border-color);
+  border-radius: 12px;
+  margin-bottom: 32px;
+  color: #F7DD43;
+  text-transform: uppercase;
+}
+
+.group span {
+  color: var(--card-text-color);
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.group ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 270px;
+}
+
+.group ul li {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 24px;
+}
+
+
+
+/* card games */
 #cards {
   display: flex;
   flex-direction: column;
@@ -166,4 +224,12 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     padding: 0 32px;
+  }
+
+  #groups {
+    /* max-width: 670px; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 32px 32px;
   }
