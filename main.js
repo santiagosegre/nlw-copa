@@ -1,6 +1,9 @@
+let delay = -0.5;
+
 function createGroup(group, player1, player2, player3, player4) {
+  delay = delay + 0.9;
   return `
-  <div class="group">
+  <div class="group" style="animation-delay: ${delay}s">
       <h2>${group}</h2>
       <ul>
     <li>
@@ -34,10 +37,17 @@ function createGroup(group, player1, player2, player3, player4) {
 
 // CRIAR GRUPO
 
-document.querySelector("#groups").innerHTML = `
-${createGroup("Grupo A", "qatar", "ecuador", "senegal", "netherlands")}
-`
+document.querySelector("#groups").innerHTML = 
+createGroup("Grupo a", "qatar", "ecuador", "senegal", "netherlands")+
+createGroup("Grupo b", "england", "iran", "united-states", "wales")+
+createGroup("Grupo c", "argentina", "saudi-arabia", "mexico", "poland")+
+createGroup("Grupo d", "france", "denmark", "tunisia", "australia")+
+createGroup("Grupo e", "spain", "germany", "japan", "costa-rica")+
+createGroup("Grupo f", "belgium", "canada", "morocco", "croatia")+
+createGroup("Grupo g", "brazil", "serbia", "switzerland", "cameroon")+
+createGroup("Grupo g", "portugal", "ghana", "uruguay", "south-korea")
 
+//
 
 function createGame(player1, hour, player2) {
   return `
@@ -49,7 +59,6 @@ function createGame(player1, hour, player2) {
   `
 }
 
-let delay = -0.5;
 function createCard(date, day, games) {
   delay = delay + 0.5;
   return `

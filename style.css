@@ -9,15 +9,24 @@
   --card-title-border-color: #746615;
   --card-border-in-color: #323238;
   --card-text-color: #E1E1E6;
+  --group-text-color: #E1E1E6;
+  --team-text-color: #161618;
   --card-bg-color: hsla(45, 7%, 11%, 0.825);
-  --body-color-background: #121214;
+  --group-bg-color: #abababac;
+  --group-bg-text-color: rgba(89, 87, 87, 0.773);
+  --body-color-background: hsla(240, 5%, 7%, 0.863);
+  --color-violet: #6F0626;
+  --shadow: 4px 5px 18px rgb(22 20 20 / 89%);
+  --shadow-colors: 4px 4px 12px rgb(22 20 20 / 89%);
   --bg: url(./assets/bg/bg-red.svg);
 }
 
 body.yellow {
-  --card-color-primary: #F7DD43;
+  --card-color-primary: hsl(51, 92%, 62%);
   --card-title-border-color: #746615;
   --card-bg-color: hsl(240, 6%, 13%, 0.825);
+  --group-bg-text-color: hsla(56, 85%, 39%, 0.918);
+  --shadow-colors: 4px 4px 12px hsla(56, 85%, 39%, 0.918);
   --bg: url(./assets/bg/bg-yellow.svg);
 }
 
@@ -25,13 +34,17 @@ body.blue {
   --card-color-primary: #338AF3;
   --card-title-border-color: #338AF3;
   --card-bg-color: hsl(240, 6%, 13%, 0.825);
+  --group-bg-text-color: hsla(229, 90%, 23%, 0.918);
+  --shadow-colors: 4px 4px 12px hsla(229, 90%, 23%, 0.918);
   --bg: url(./assets/bg/bg-blue.svg);
 }
 
 body.red {
-  --card-color-primary: #db1d1d;
-  --card-title-border-color: #db1d1d;
+  --card-color-primary: #6F0626;
+  --card-title-border-color: #6F0626;
   --card-bg-color: rgba(31, 31, 35, 0.888);
+  --group-bg-text-color: hsla(342, 90%, 23%, 0.918);
+  --shadow-colors: 4px 4px 12px hsla(342, 90%, 23%, 0.918);
   --bg: url(./assets/bg/bg-red.svg);
 }
 
@@ -39,6 +52,8 @@ body.green {
   --card-color-primary: #047C3F;
   --card-title-border-color: #047C3F;
   --card-bg-color: hsl(132, 9%, 11%, 0.825);
+  --group-bg-text-color: hsla(150, 94%, 25%, 0.918);
+  --shadow-colors: 6px 6px 12px hsla(150, 94%, 25%, 0.918);
   --bg: url(./assets/bg/bg-green.svg);
 }
 
@@ -47,7 +62,10 @@ ul {
 }
 
 body {
-  background: #121214 var(--bg) no-repeat top center/cover;
+  background-color: #121214;
+  background-image: var(--bg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body * {
@@ -75,9 +93,9 @@ header {
 .group {
   padding: 32px 23px;
   text-align: center;
-  background-color: var(--card-bg-color);
-  border-radius: 12px;
-  border-bottom: 2px solid var(--card-color-primary);
+  background-color: var(--group-bg-color);
+  border-radius: 24px;
+  box-shadow: var(--shadow-colors);
 }
 
 .group img {
@@ -93,17 +111,19 @@ header {
   margin-inline: auto;
   gap: 16px;
   padding: 8px 16px;
-  border: 1px solid var(--card-title-border-color);
+  background-color: var(--group-bg-text-color);
   border-radius: 12px;
   margin-bottom: 32px;
-  color: #F7DD43;
+  color: var(--group-text-color);
+  text-shadow: 2px 2px 7px hsla(240, 5%, 7%, 0.896);
   text-transform: uppercase;
 }
 
 .group span {
-  color: var(--card-text-color);
+  color: var(--team-text-color);
   text-transform: uppercase;
   font-size: 18px;
+  text-shadow: 1px 1px 2px hsla(240, 7%, 79%, 0.792);
 }
 
 .group ul {
@@ -120,7 +140,33 @@ header {
   gap: 24px;
 }
 
+.group h2:hover,
+.group span:hover,
+.group img:hover {
+  transform: scale(1.2);
+}
 
+.group h2,
+.group span:hover,
+.group img {
+  transition: transform 0.5s;
+}
+
+.group {
+  opacity: 0;
+  animation: appeargroup 1s forwards;
+}
+
+@keyframes appeargroup {
+  0% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 
 /* card games */
 #cards {
@@ -133,8 +179,8 @@ header {
   padding: 32px 23px;
   text-align: center;
   background-color: var(--card-bg-color);
-  border-radius: 12px;
-  border-bottom: 2px solid var(--card-color-primary);
+  border-radius: 24px;
+  box-shadow: var(--shadow-colors);
 }
 
 .card img {
@@ -150,7 +196,7 @@ header {
   margin-inline: auto;
   gap: 16px;
   padding: 8px 16px;
-  border: 1px solid var(--card-title-border-color);
+  border: 3px solid var(--card-title-border-color);
   border-radius: 12px;
   margin-bottom: 53px;
   color: #F7DD43;
