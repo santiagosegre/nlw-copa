@@ -18,7 +18,7 @@
   --color-violet: #6F0626;
   --shadow: 4px 5px 18px rgb(22 20 20 / 89%);
   --shadow-colors: 4px 4px 12px rgb(22 20 20 / 89%);
-  --bg: url(./assets/bg/bg-red.svg);
+  --bg: url(../assets/bg/bg-red.svg);
   --footer-bg: hsla(45, 7%, 11%);
 }
 
@@ -82,7 +82,7 @@ body.red {
   --card-bg-color: rgba(31, 31, 35, 0.888);
   --group-bg-text-color: hsla(342, 90%, 23%, 0.918);
   --shadow-colors: 4px 4px 12px hsla(342, 66%, 47%, 0.918);
-  --bg: url(./assets/bg/bg-red.svg);
+  --bg: url(../assets/bg/bg-red.svg);
 }
 
 body.blue {
@@ -91,7 +91,7 @@ body.blue {
   --card-bg-color: hsl(240, 6%, 13%, 0.825);
   --group-bg-text-color: hsla(229, 90%, 23%, 0.918);
   --shadow-colors: 4px 4px 12px hsla(229, 74%, 43%, 0.918);
-  --bg: url(./assets/bg/bg-blue.svg);
+  --bg: url(../assets/bg/bg-blue.svg);
 }
 
 body.green {
@@ -100,7 +100,7 @@ body.green {
   --card-bg-color: hsl(132, 9%, 11%, 0.825);
   --group-bg-text-color: hsla(150, 94%, 25%, 0.918);
   --shadow-colors: 6px 6px 12px hsla(150, 90%, 35%, 0.918);
-  --bg: url(./assets/bg/bg-green.svg);
+  --bg: url(../assets/bg/bg-green.svg);
 }
 
 body.yellow {
@@ -109,7 +109,7 @@ body.yellow {
   --card-bg-color: hsl(240, 6%, 13%, 0.825);
   --group-bg-text-color: hsla(56, 85%, 48%, 0.811);
   --shadow-colors: 4px 4px 12px hsla(56, 85%, 39%, 0.878);
-  --bg: url(./assets/bg/bg-yellow.svg);
+  --bg: url(../assets/bg/bg-yellow.svg);
 }
 
 ul {
@@ -152,6 +152,10 @@ header {
   text-align: center;
   padding-bottom: 32px;
   gap: 32px;
+}
+
+h3 {
+  background-color: azul;
 }
 
 #groups {

@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendário de Jogos - NLW Copa</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
     <body id="body" class="red">
         <div id="app">
@@ -20,40 +20,24 @@
                     <div id="btn-green"></div>
                     <div id="btn-yellow"></div>
                 </div>
-                <img class="logo" src="./assets//logo-copa/logo-copa-red.svg" alt="Logo da Copa do Mundo 2022" height="150px">
+                <img class="logo" src="../assets/logo-copa/logo-copa-red.svg" alt="Logo da Copa do Mundo 2022" height="150px">
             </header>
             <main >
-                <section id="menu">
+                <div id="menu">
                     <ul>
-                    <a href="index.html">
-                      <li>
-                        <h3>Início</h3>
-                      </li>
-                    </a>                       
+                        <a href="../index.html">
                         <li>
-                        <h3>Grupos da Copa</h3>
+                            <h3>Início</h3>
                         </li>
-                    </ul>
-
-                    <h2>Escolha sua Seleção</h2>
-                    <ul>
-                        <a href="qatar.html">
+                        </a>                       
+                        <a href="groups.html">
                             <li>
-                            <h3>Qatar</h3>
+                            <h3>Grupos da Copa</h3>
                             </li>
                         </a>
-                        <li>
-                            <h3>Ecuador</h3>
-                        </li>
-                        <li>
-                            <h3>Senegal</h3>
-                        </li>
-                        <li>
-                            <h3>Netherlands</h3>
-                        </li>
                     </ul>
-                </section>
 
+                </div>
                 <div id="cards">
 
                 </div>
@@ -62,6 +46,7 @@
         <footer>
             Criado por <a href="#">Santiago Segre</a>
         </footer>
-        <script src="./main.js"></script>
+        <script src="../js/games.js"></script>
+        <script src="../js/colors.js"></script>
     </body>
 </html>
