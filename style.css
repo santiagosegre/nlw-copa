@@ -21,6 +21,56 @@
   --bg: url(./assets/bg/bg-red.svg);
 }
 
+.colors {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 32px;
+}
+
+.colors h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.colors div {
+  width: 3rem;
+  height: 2rem;
+  border-radius: 12px;
+}
+
+#btn-red {
+  font-weight: 100;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: black;
+  background-color: #6F0626;
+}
+
+#btn-blue {
+  font-weight: 100;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: black;
+  background-color: #338AF3;
+}
+
+#btn-green {
+  font-weight: 100;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: black;
+  background-color: #047C3F;
+}
+
+#btn-yellow {
+  font-weight: 100;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: black;
+  background-color: hsl(51, 92%, 62%);
+}
+
 body.yellow {
   --card-color-primary: hsl(51, 92%, 62%);
   --card-title-border-color: #746615;
@@ -75,11 +125,11 @@ body * {
 #app {
   width: fit-content;
   margin: auto;
-  padding: 50px 0;
+  padding-bottom: 50px;
 }
 
 header {
-  margin-bottom: 50px;
+  margin: 32px 0;
   text-align: center;
 }
 
