@@ -19,6 +19,7 @@
   --shadow: 4px 5px 18px rgb(22 20 20 / 89%);
   --shadow-colors: 4px 4px 12px rgb(22 20 20 / 89%);
   --bg: url(./assets/bg/bg-red.svg);
+  --footer-bg: hsla(45, 7%, 11%);
 }
 
 .colors {
@@ -45,6 +46,7 @@
   cursor: pointer;
   color: black;
   background-color: #6F0626;
+  box-shadow: 1px 1px 10px hsla(0, 0%, 85%, 0.792);
 }
 
 #btn-blue {
@@ -52,7 +54,8 @@
   padding: 5px 10px;
   cursor: pointer;
   color: black;
-  background-color: #338AF3;
+  background-color: hsla(229, 90%, 23%, 0.918);
+  box-shadow: 1px 1px 10px hsla(0, 0%, 85%, 0.792);
 }
 
 #btn-green {
@@ -61,6 +64,7 @@
   cursor: pointer;
   color: black;
   background-color: #047C3F;
+  box-shadow: 1px 1px 10px hsla(0, 0%, 85%, 0.792);
 }
 
 #btn-yellow {
@@ -68,25 +72,8 @@
   padding: 5px 10px;
   cursor: pointer;
   color: black;
-  background-color: hsl(51, 92%, 62%);
-}
-
-body.yellow {
-  --card-color-primary: hsl(51, 92%, 62%);
-  --card-title-border-color: #746615;
-  --card-bg-color: hsl(240, 6%, 13%, 0.825);
-  --group-bg-text-color: hsla(56, 85%, 39%, 0.918);
-  --shadow-colors: 4px 4px 12px hsla(56, 85%, 39%, 0.918);
-  --bg: url(./assets/bg/bg-yellow.svg);
-}
-
-body.blue {
-  --card-color-primary: #338AF3;
-  --card-title-border-color: #338AF3;
-  --card-bg-color: hsl(240, 6%, 13%, 0.825);
-  --group-bg-text-color: hsla(229, 90%, 23%, 0.918);
-  --shadow-colors: 4px 4px 12px hsla(229, 90%, 23%, 0.918);
-  --bg: url(./assets/bg/bg-blue.svg);
+  background-color: hsl(56, 85%, 48%);
+  box-shadow: 1px 1px 10px hsla(0, 0%, 85%, 0.792);
 }
 
 body.red {
@@ -94,8 +81,17 @@ body.red {
   --card-title-border-color: #6F0626;
   --card-bg-color: rgba(31, 31, 35, 0.888);
   --group-bg-text-color: hsla(342, 90%, 23%, 0.918);
-  --shadow-colors: 4px 4px 12px hsla(342, 90%, 23%, 0.918);
+  --shadow-colors: 4px 4px 12px hsla(342, 66%, 47%, 0.918);
   --bg: url(./assets/bg/bg-red.svg);
+}
+
+body.blue {
+  --card-color-primary: #338AF3;
+  --card-title-border-color: #338AF3;
+  --card-bg-color: hsl(240, 6%, 13%, 0.825);
+  --group-bg-text-color: hsla(229, 90%, 23%, 0.918);
+  --shadow-colors: 4px 4px 12px hsla(229, 74%, 43%, 0.918);
+  --bg: url(./assets/bg/bg-blue.svg);
 }
 
 body.green {
@@ -103,8 +99,17 @@ body.green {
   --card-title-border-color: #047C3F;
   --card-bg-color: hsl(132, 9%, 11%, 0.825);
   --group-bg-text-color: hsla(150, 94%, 25%, 0.918);
-  --shadow-colors: 6px 6px 12px hsla(150, 94%, 25%, 0.918);
+  --shadow-colors: 6px 6px 12px hsla(150, 90%, 35%, 0.918);
   --bg: url(./assets/bg/bg-green.svg);
+}
+
+body.yellow {
+  --card-color-primary: hsl(56, 71%, 41%);
+  --card-title-border-color: #bca41e;
+  --card-bg-color: hsl(240, 6%, 13%, 0.825);
+  --group-bg-text-color: hsla(56, 85%, 48%, 0.811);
+  --shadow-colors: 4px 4px 12px hsla(56, 85%, 39%, 0.878);
+  --bg: url(./assets/bg/bg-yellow.svg);
 }
 
 ul {
@@ -122,6 +127,12 @@ body * {
   font-family: 'Roboto', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: var(--team-text-color);
+  text-transform: uppercase;
+}
+
 #app {
   width: fit-content;
   margin: auto;
@@ -131,6 +142,16 @@ body * {
 header {
   margin: 32px 0;
   text-align: center;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 32px;
+  gap: 32px;
 }
 
 #groups {
@@ -149,8 +170,8 @@ header {
 }
 
 .group img {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
 }
 
 .group h2 {
@@ -167,12 +188,13 @@ header {
   color: var(--group-text-color);
   text-shadow: 2px 2px 7px hsla(240, 5%, 7%, 0.896);
   text-transform: uppercase;
+  font-size: 1.4rem;
 }
 
 .group span {
   color: var(--team-text-color);
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 1.1rem;
   text-shadow: 1px 1px 2px hsla(240, 7%, 79%, 0.792);
 }
 
@@ -312,9 +334,49 @@ header {
 }
 
 
+footer {
+  color: rgb(174, 173, 173);
+  font-size: 0.8rem;
+  background-color: var(--footer-bg);
+  margin: 0 auto;
+  text-align: center;
+  padding: 12px 0;
+  /* position: fixed;
+  left: 0;
+  bottom: 0; */
+  width: 100%;
+}
+
+footer a {
+  color: rgb(226, 226, 226);
+  text-transform: none;
+}
+
+/* STYLES TEAMS PAGS */
+
+#group-a {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32px;
+  gap: 32px;
+}
+
+#cards-qatar {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+
+
+
+/* MEDIA */
+
 @media (min-width: 700px) {
 
-  #cards {
+  #cards,
+  #cards-qatar {
     /* max-width: 670px; */
     flex-direction: row;
     flex-wrap: wrap;
@@ -322,10 +384,12 @@ header {
     padding: 0 32px;
   }
 
-  #groups {
+  #groups,
+  #group-a {
     /* max-width: 670px; */
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     padding: 0 32px 32px;
   }
+}
