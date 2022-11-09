@@ -449,6 +449,12 @@ footer a {
 
 /* MEDIA */
 
+@media (min-width: 200px) {
+  body {
+    background-image: url(../assets/bg/bg-new-0.svg);
+  }
+}
+
 @media (min-width: 500px) {
   body {
     background-image: url(../assets/bg/bg-new-1.svg);

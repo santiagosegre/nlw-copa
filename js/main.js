@@ -1,42 +1,77 @@
-// const btnRed = document.querySelector('#btn-red');
-// const btnBlue = document.querySelector('#btn-blue');
-// const btnGreen = document.querySelector('#btn-green');
-// const btnYellow = document.querySelector('#btn-yellow');
-// const body = document.querySelector('#body')
 
-// btnRed.addEventListener('click', redColor)
-// btnBlue.addEventListener('click', blueColor)
-// btnGreen.addEventListener('click', greenColor)
-// btnYellow.addEventListener('click', yellowColor)
+function createMenu(icon, menu) {
+  return `
+<ul>
+  <a href="./pages/groups.html">
+    <li>
+      <i class="${icon}"></i>
+      <h3>${menu}</h3>
+    </li>
+  </a>
+</ul>
+`
+}
 
-// function redColor() {
-//   // console.log('Vermelho')
-//   body.classList.add('red');
-//   body.classList.remove('blue');
-//   body.classList.remove('green');
-//   body.classList.remove('yellow')
-// }
+document.querySelector("#menu-options").innerHTML = 
+createMenu(
+  "ri-table-line",
+  "Grupos"
+) +
+createMenu(
+  "ri-calendar-event-line",
+  "Calendário"
+)
 
-// function blueColor() {
-//   // console.log('Azul')
-//   body.classList.add('blue');
-//   body.classList.remove('red');
-//   body.classList.remove('green');
-//   body.classList.remove('yellow')
-// }
+let delay = -0.5
+function createTeam(team, nameTeam) {
+  delay = delay + 0.2
+  return `
+<ul >
+    <a href="./pages/${team}.html">
+    <li class="teams" style="animation-delay: ${delay}s">
+      <img src="assets/teams/icon-${team}.svg" alt="">
+      <p>
+        ${nameTeam}
+      </p>
+     </li>
+    </a>
+</ul>
+`
+}
 
-// function greenColor() {
-//   // console.log('Verde')
-//   body.classList.add('green');
-//   body.classList.remove('blue');
-//   body.classList.remove('red');
-//   body.classList.remove('yellow')
-// }
+// team: Nome do arquivo que tem a imagem
+// nameTeam: Como vai aparecer o nome da Seleção no <p>
 
-// function yellowColor() {
-//   // console.log('Amarelo')
-//   body.classList.add('yellow');
-//   body.classList.remove('blue');
-//   body.classList.remove('green');
-//   body.classList.remove('red')
-// }
+document.querySelector("#menu-teams").innerHTML =
+  createTeam("qatar", "Qatar") +
+  createTeam("ecuador", "Equador") +
+  createTeam("senegal", "Senegal") +
+  createTeam("netherlands", "Holanda") +
+  createTeam("england", "Inglaterra") +
+  createTeam("iran", "Irã") +
+  createTeam("united-states", "Estados unidos") +
+  createTeam("wales", "País de Gales") +
+  createTeam("argentina", "Argentina") +
+  createTeam("saudi-arabia", "Arábia Saudita") +
+  createTeam("mexico", "México") +
+  createTeam("poland", "Polônia") +
+  createTeam("france", "França") +
+  createTeam("denmark", "Dinamarca") +
+  createTeam("tunisia", "Tunísia") +
+  createTeam("australia", "Austrália") +
+  createTeam("spain", "Espanha") +
+  createTeam("germany", "Alemanha") +
+  createTeam("japan", "Japão") +
+  createTeam("costa-rica", "Costa Rica") +
+  createTeam("belgium", "Bélgica") +
+  createTeam("canada", "Canadá") +
+  createTeam("morocco", "Marrocos") +
+  createTeam("croatia", "Croácia") +
+  createTeam("brazil", "Brasil") +
+  createTeam("serbia", "Sérvia") +
+  createTeam("switzerland", "Suíça") +
+  createTeam("cameroon", "Camarões") +
+  createTeam("portugal", "Portugal") +
+  createTeam("ghana", "Gana") +
+  createTeam("uruguay", "Uruguai") +
+  createTeam("south-korea", "Korea do Sul")
