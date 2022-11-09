@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
     <body id="body">
@@ -24,38 +25,28 @@
             </header>
             <main >
                 <section id="menu">
-                    <ul>
-                        <a href="./pages/groups.html">
-                            <li>
-                                <h3>Grupos da Copa</h3>
-                            </li>
-                        </a>
-                        <a href="./pages/games.html">
-                            <li>
-                                <h3>Calendário de Jogos</h3>
-                            </li>
-                        </a>
-                    </ul>
+                    <div id="menu-options">
+                        <ul>
+                            <a href="./pages/groups.html">
+                                <li>
+                                    <i class="ri-table-line"></i>
+                                    <h3>Grupos</h3>
+                                </li>
+                            </a>
+                            <a href="./pages/games.html">
+                                <li>
+                                    <i class="ri-calendar-event-line"></i>
+                                    <h3>Calendário</h3>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                    <span>
+                        Escolha a seleção que vai acompanhar os jogos
+                    </span>
+                    <div id="menu-teams">
 
-                    <h2>Escolha sua Seleção</h2>
-                    <ul>
-                        <a href="./pages/qatar.html">
-                            <li>
-                                <h3>
-                                    Qatar
-                                </h3>
-                            </li>
-                        </a>
-                        <li>
-                            <h3>Ecuador</h3>
-                        </li>
-                        <li>
-                            <h3>Senegal</h3>
-                        </li>
-                        <li>
-                            <h3>Netherlands</h3>
-                        </li>
-                    </ul>
+                    </div>
                 </section>
                 <!-- <div id="groups">
 
@@ -69,5 +60,6 @@
             Criado por <a href="https://github.com/santiagosegre" target="_blank">Santiago Segre</a>
         </footer>
         <script src="./js/main.js"></script>
+        <script src="./js/creat-team.js"></script>
     </body>
 </html>

@@ -1,11 +1,11 @@
 function createGame(player1, hour, player2) {
   return `
-  <li>
-    <img src="../assets/teams/icon-${player1}.svg" alt="flag ${player1}"> 
-    <strong>${hour}</strong>
-    <img src="../assets/teams/icon-${player2}.svg" alt="flag ${player2}">
-  </li>  
-  `
+<li>
+  <img src="../assets/teams/icon-${player1}.svg" alt="flag ${player1}"> 
+  <strong>${hour}</strong>
+  <img src="../assets/teams/icon-${player2}.svg" alt="flag ${player2}">
+</li>  
+`
 }
 
 let delay = -0.5
