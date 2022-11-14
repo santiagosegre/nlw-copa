@@ -1,9 +1,9 @@
 
-function createMenu(icon, menu) {
+function createMenu(icon, menu, page) {
   return `
 <ul>
-  <a href="./pages/groups.html">
-    <li>
+  <a href="pages/${page}.html">
+    <li data-aos="fade-down">
       <i class="${icon}"></i>
       <h3>${menu}</h3>
     </li>
@@ -12,15 +12,10 @@ function createMenu(icon, menu) {
 `
 }
 
-document.querySelector("#menu-options").innerHTML = 
-createMenu(
-  "ri-table-line",
-  "Grupos"
-) +
-createMenu(
-  "ri-calendar-event-line",
-  "Calendário"
-)
+document.querySelector("#menu-options").innerHTML =
+  createMenu("ri-table-line", "Grupos", "games") +
+  createMenu("ri-calendar-event-line", "Calendário", "games")
+
 
 let delay = -0.5
 function createTeam(team, nameTeam) {
